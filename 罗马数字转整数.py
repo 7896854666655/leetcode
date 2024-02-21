@@ -9,12 +9,12 @@ class Solution:
         
         while i<len(s):
                 
-                if a == True:
+                if a == True://当出现IV或者IX等将循环向前一步，添加a判断是否需要推前
                     i += 1
                     a = False
 
                 if s[i] == "I":
-                    if i == len(s)-2:
+                    if i == len(s)-2://防止超寨
                         if s[i+1] == "V":
                             MAX += 4
                             break
